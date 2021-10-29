@@ -1,0 +1,53 @@
+.feature {
+    margin-bottom: 220px;
+    
+  &--line {
+    width: 56px;
+    height: 2px;
+    background-color: #000000;
+    margin: 15px 0px 30px;
+  }
+
+  &__title {
+    font-size: 3.6rem;
+    font-weight: bold;
+    line-height: 5.6rem;
+    color: #000;
+  }
+
+  &__desc {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 3rem;
+  }
+
+  .providers {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 220px;
+
+    &-img {
+      transform: translateX(-120px);
+    }
+
+    .providers-content {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      padding-right: 50px;
+    }
+  }
+
+  .dowload-app{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+      .dowload-app-content{
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        padding-left: 50px;
+      }
+  }
+}
