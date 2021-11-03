@@ -1,0 +1,27 @@
+footer{
+    background: linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+    padding: 116px 0px;
+
+    .footer-main{
+        color: #fff;
+
+        .footer-info{
+            width: 390px;
+            &__logo{
+                height: 41px;
+            }
+
+            &__desc{
+                font-size: 1.8rem;
+                font-weight: 300;
+                line-height: 2.8rem;
+            }
+
+            &__copyRight{
+                font-size: 1.6rem;
+                font-weight: 300;
+                line-height: 2.8rem;
+            }
+        }
+    }
+}

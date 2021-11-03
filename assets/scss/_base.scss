@@ -11,7 +11,13 @@ img {
 }
 
 .container {
-  max-width: 1246px;
+  max-width: 1144px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-fuild{
+  max-width: 1220px;
   width: 100%;
   margin: 0 auto;
 }
@@ -45,10 +51,10 @@ img {
     &::after{
       content: "";
       width:100px;
-      height: 4px;
+      height: 3px;
       background-color: #000;
       position: absolute;
-      top: 100%;
+      top: calc(100% + 20px);
       left: 50%;
       transform: translateX(-50%);
     }
