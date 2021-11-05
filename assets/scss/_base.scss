@@ -1,13 +1,21 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
-  font-family: sans-serif;
+  font-family:"mulish", sans-serif;
   color: #7d7987;
+}
+
+body{
+  overflow: hidden;
 }
 
 img {
   width: 100%;
   height: 100%;
+}
+
+.app{
+  padding: 0px 20px;
 }
 
 .container {
@@ -16,7 +24,7 @@ img {
   margin: 0 auto;
 }
 
-.container-fuild{
+.container-fluid{
   max-width: 1220px;
   width: 100%;
   margin: 0 auto;

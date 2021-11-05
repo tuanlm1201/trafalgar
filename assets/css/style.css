@@ -230,13 +230,21 @@ input[type=button] {
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
-  font-family: sans-serif;
+  font-family: "mulish", sans-serif;
   color: #7d7987;
+}
+
+body {
+  overflow: hidden;
 }
 
 img {
   width: 100%;
   height: 100%;
+}
+
+.app {
+  padding: 0px 20px;
 }
 
 .container {
@@ -245,7 +253,7 @@ img {
   margin: 0 auto;
 }
 
-.container-fuild {
+.container-fluid {
   max-width: 1220px;
   width: 100%;
   margin: 0 auto;
@@ -403,7 +411,7 @@ img {
   font-weight: 300;
   line-height: 2.8rem;
   overflow: hidden;
-  word-break: break-all;
+  word-break: break-word;
   text-overflow: ellipsis;
 }
 #service .service__btn {
@@ -486,6 +494,7 @@ img {
   margin-bottom: 220px;
 }
 .customer-main .customer-list .customer-item {
+  width: 100%;
   background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
   border-radius: 24px;
   padding: 64px 118px;
@@ -628,11 +637,13 @@ img {
 }
 
 footer {
-  background: linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+  background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
   padding: 116px 0px;
 }
 footer .footer-main {
   color: #fff;
+  display: flex;
+  justify-content: space-between;
 }
 footer .footer-main .footer-info {
   width: 390px;
@@ -644,11 +655,38 @@ footer .footer-main .footer-info__desc {
   font-size: 1.8rem;
   font-weight: 300;
   line-height: 2.8rem;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 footer .footer-main .footer-info__copyRight {
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 2.8rem;
+}
+footer .footer-main .footer-menu {
+  display: flex;
+}
+footer .footer-main .footer-menu .footer-menu-list {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-main .footer-menu .footer-menu-list:last-child {
+  margin-right: 50px;
+}
+footer .footer-main .footer-menu .footer-menu-list .footer-menu__heading {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 6rem;
+}
+footer .footer-main .footer-menu .footer-menu-list .footer-menu__link {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 3.8rem;
+  color: #fff;
+}
+footer .footer-main .footer-menu .footer-menu-list ~ .footer-menu-list {
+  margin-left: 145px;
 }
 
 /*# sourceMappingURL=style.css.map */
