@@ -41,11 +41,12 @@
 
   .header-menu__bg {
     position: fixed;
-    right: 15px;
+    right: 5px;
     width: 50px;
     height: 50px;
     z-index: 8;
     transform: scale(0);
+    border-radius: 50%;
     background-color: #2082d3;
     transition: all 0.7s ease;
     &.is-active {

@@ -236,6 +236,7 @@ html {
 
 body {
   overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 img {
@@ -335,11 +336,12 @@ img {
 }
 .header-main .header-menu__bg {
   position: fixed;
-  right: 15px;
+  right: 5px;
   width: 50px;
   height: 50px;
   z-index: 8;
   transform: scale(0);
+  border-radius: 50%;
   background-color: #2082d3;
   transition: all 0.7s ease;
 }
@@ -617,90 +619,108 @@ img {
   }
 }
 
-.customer-main {
+.review-main {
   margin-bottom: 220px;
-}
-.customer-main .customer-list .customer-item {
   width: 100%;
   background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
   border-radius: 24px;
-  padding: 64px 118px;
+  padding: 64px 0px;
 }
-.customer-main .customer-list .customer-item .customer-item__heading {
+.review-main .review__heading {
   font-size: 3.6rem;
   font-weight: bold;
   line-height: 95.5%;
   color: #fff;
   text-align: center;
 }
-.customer-main .customer-list .customer-item .customer-item-content {
-  margin-top: 90px;
+.review-main .review-author {
   display: flex;
   justify-content: space-between;
-}
-.customer-main .customer-list .customer-item .customer-item-content .customer-item-author {
-  display: flex;
-}
-.customer-main .customer-list .customer-item .customer-item-content .customer-item-author .customer-item-author__img {
-  width: 141px;
-  height: 141px;
-  border-radius: 50%;
-}
-.customer-main .customer-list .customer-item .customer-item-content .customer-item-author .customer-item-author__img img {
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-}
-.customer-main .customer-list .customer-item .customer-item-content .customer-item-author__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 50px;
+  align-items: center;
+  margin-top: 100px;
+  padding: 0px 118px;
   color: #fff;
 }
-.customer-main .customer-list .customer-item .customer-item-content .customer-item-author__name {
+.review-main .review-author__info {
+  display: flex;
+  align-items: center;
+}
+.review-main .review-author__img {
+  margin-right: 30px;
+}
+.review-main .review-author__text {
+  display: flex;
+  flex-direction: column;
+}
+.review-main .review-author__name {
   font-size: 2.2rem;
   font-weight: bold;
   line-height: 4.8rem;
 }
-.customer-main .customer-list .customer-item .customer-item-content .customer-item-author__work {
+.review-main .review-author__work {
   font-size: 1.8rem;
   line-height: 4.8rem;
+  opacity: 0.9;
 }
-.customer-main .customer-list .customer-item .customer-item-content .customer-item__desc {
+.review-main .review-author__desc {
   max-width: 420px;
-  width: 100%;
   font-size: 1.9rem;
   line-height: 3rem;
-  color: rgba(255, 255, 255, 0.9);
+  opacity: 0.9;
 }
-.customer-main .customer-list .slick-arrow {
-  position: absolute;
-  background-color: transparent;
-  border: 0px;
-  color: #fff;
-  z-index: 5;
+.review-main .slick-next {
+  top: 150%;
+  right: 40%;
 }
-.customer-main .customer-list .slick-arrow::before {
-  font-size: 3rem;
+.review-main .slick-next:before {
+  color: #458FF6;
 }
-.customer-main .customer-list .slick-prev {
-  left: 10px;
+.review-main .slick-prev {
+  top: 150%;
+  left: 40%;
 }
-.customer-main .customer-list .slick-next {
-  right: 20px;
+.review-main .slick-prev:before {
+  color: #458FF6;
 }
-.customer-main .customer-list .slick-dots {
-  position: absolute;
-  bottom: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex !important;
-  justify-content: center;
+.review-main .slick-dots {
+  top: 150%;
 }
-.customer-main .customer-list .slick-dots li button::before {
-  font-size: 1rem;
-  color: #5b9bf3;
+@media only screen and (max-width: 1023px) {
+  .review-main .review__heading {
+    font-size: 3.3rem;
+  }
+  .review-main .review-author {
+    padding: 0px 30px;
+  }
+  .review-main .review-author__name {
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .review-main .review-author__work {
+    font-size: 1.6rem;
+  }
+  .review-main .review-author__desc {
+    font-size: 1.7rem;
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .review-main .review-author {
+    flex-direction: column;
+    padding: 0px 10px;
+  }
+  .review-main .review-author__name {
+    font-size: 1.8rem;
+    line-height: 30px;
+  }
+  .review-main .review-author__work {
+    font-size: 1.4rem;
+  }
+  .review-main .review-author__desc {
+    font-size: 1.5rem;
+    width: 100%;
+    margin-top: 20px;
+  }
 }
 
 .article-cards {
