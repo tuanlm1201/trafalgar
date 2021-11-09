@@ -34,8 +34,8 @@ footer {
         display: flex;
         flex-direction: column;
 
-        &:last-child{
-            margin-right: 50px;
+        &:last-child {
+          margin-right: 50px;
         }
 
         .footer-menu__heading {
@@ -55,6 +55,31 @@ footer {
         & ~ .footer-menu-list {
           margin-left: 145px;
         }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px){
+  .footer-main {
+    gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .footer-main {
+    flex-direction: column;
+  }
+
+  .footer-menu {
+    flex-wrap: wrap;
+    gap: 150px;
+
+    &-list {
+      margin-top: 30px;
+
+      & ~ .footer-menu-list {
+        margin-left: 0 !important;
       }
     }
   }

@@ -31,11 +31,15 @@
     background-color: transparent;
     margin-top: 50px;
 
-    &:hover{
+    &:hover {
       background-color: #458ff6;
       color: #fff;
-      transition: all .3s linear;
+      transition: all 0.3s linear;
     }
+  }
+
+  .feature-content {
+    display: flex;
   }
 
   .providers {
@@ -50,7 +54,7 @@
     .providers-content {
       display: flex;
       flex-direction: column;
-      width: 500px;
+      max-width: 500px;
       padding-right: 50px;
     }
   }
@@ -66,6 +70,49 @@
       max-width: 420px;
       padding-left: 50px;
       padding-right: 50px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .feature-content {
+      flex-direction: column;
+    }
+
+    .feature__title {
+      margin-top: 20px;
+      font-size: 3rem;
+    }
+
+    .feature__desc {
+      font-size: 1.2rem;
+    }
+
+    .providers {
+      &-img {
+        transform: translate(0);
+
+        img {
+          object-fit: contain;
+        }
+      }
+
+      &-content{
+        padding: 0;
+      }
+    }
+
+    .download-app {
+      &-img {
+        transform: translate(0);
+
+        img {
+          object-fit: contain;
+        }
+      }
+
+      &-content{
+        padding: 0;
+      }
     }
   }
 }

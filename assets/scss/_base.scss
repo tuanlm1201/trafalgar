@@ -1,11 +1,11 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
-  font-family:"mulish", sans-serif;
+  font-family: "mulish", sans-serif;
   color: #7d7987;
 }
 
-body{
+body {
   overflow: hidden;
 }
 
@@ -14,20 +14,18 @@ img {
   height: 100%;
 }
 
-.app{
+.container {
+  max-width: 1184px;
+  width: 100%;
+  margin: 0 auto;
   padding: 0px 20px;
 }
 
-.container {
-  max-width: 1144px;
+.container-fluid {
+  max-width: 1260px;
   width: 100%;
   margin: 0 auto;
-}
-
-.container-fluid{
-  max-width: 1220px;
-  width: 100%;
-  margin: 0 auto;
+  padding: 0px 20px;
 }
 
 .btn {
@@ -39,15 +37,15 @@ img {
   border-radius: 55px;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
-.section-heading{
+.section-heading {
   margin: 100px auto 80px;
-  width:  952px;
-
-  &__title{
+  max-width: 952px;
+  
+  &__title {
     color: #000000;
     font-size: 3.6rem;
     font-weight: bold;
@@ -56,9 +54,9 @@ img {
     position: relative;
     top: 0;
 
-    &::after{
+    &::after {
       content: "";
-      width:100px;
+      width: 100px;
       height: 3px;
       background-color: #000;
       position: absolute;
@@ -68,10 +66,9 @@ img {
     }
   }
 
-  &__desc{
+  &__desc {
     font-size: 1.8rem;
     font-weight: 300;
     line-height: 3rem;
-
   }
 }

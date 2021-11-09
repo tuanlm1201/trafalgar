@@ -1,10 +1,17 @@
 .header-main {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 56px;
 
   .header-logo {
     height: 40px;
+  }
+
+  .header-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
   }
 
   .header-menu {
@@ -26,5 +33,78 @@
         transition: color 0.3s linear;
       }
     }
+
+    &__close {
+      display: none;
+    }
+  }
+
+  .header-menu__bg {
+    position: fixed;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    z-index: 8;
+    transform: scale(0);
+    background-color: #2082d3;
+    transition: all 0.7s ease;
+    &.is-active {
+      transform: scale(100);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .header-toggle {
+      display: inline-block;
+    }
+
+    .header-menu {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      flex-direction: column;
+      padding: 100px 40px;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 9;
+      transition: all 0.7s ease;
+      transition-delay: 0.3s;
+
+      &.is-active {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &__item {
+        color: white;
+        padding-bottom: 30px;
+        font-size: 3rem;
+        margin-right: 0;
+      }
+
+      &__link {
+        color: white;
+        text-transform: uppercase;
+      }
+
+      &__close {
+        display: block;
+        font-size: 1.5rem;
+        color: white;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1023px){
+      .header-menu__item {
+        margin-right: 20px;
+      }
   }
 }

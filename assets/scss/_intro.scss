@@ -1,5 +1,6 @@
 .intro {
   display: flex;
+  align-items: center;
   min-height: 600px;
   margin-top: 80px;
 
@@ -47,6 +48,19 @@
 
   &__img {
     background: url(../image/intro-logo.png) no-repeat;
-    width: 695px;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    max-width: 695px;
+    height: 600px;
+  }
+
+  @media screen and(max-width: 767px) {
+    flex-direction: column;
+    gap: 40px;
+
+    &__text {
+      margin-right: 0px;
+    }
   }
 }

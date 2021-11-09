@@ -1,67 +1,88 @@
 .article-cards {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
 
   .article-item {
-    width: 350px;
+    max-width: 350px;
     border-radius: 30px;
     overflow: hidden;
 
-    &-content{
-        padding: 24px 36px 25px 33px;
+    &-content {
+      padding: 24px 36px 25px 33px;
     }
 
     &__img {
-        width: 100%;
-        display: block;
+      width: 100%;
+      display: block;
     }
 
-    &__title{
-        font-size: 2.1rem;
-        font-weight: bold;
-        line-height: 3.2rem; 
-        color: #000;
+    &__title {
+      font-size: 2.1rem;
+      font-weight: bold;
+      line-height: 3.2rem;
+      color: #000;
     }
 
-    &__desc{
-        font-size: 1.6rem;
-        font-weight: 300;
-        line-height: 2.8rem;
+    &__desc {
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height: 2.8rem;
     }
 
-    &__btn{
-        text-decoration: none;
-        font-size: 1.7rem;
-        font-weight: 500;
-        line-height: 2.8rem;
-        color: #4089ED;
-        text-align: left;
-        
-        &:hover{
-            text-decoration: underline;
-            transition: all .9s linear;
-        }
+    &__btn {
+      text-decoration: none;
+      font-size: 1.7rem;
+      font-weight: 500;
+      line-height: 2.8rem;
+      color: #4089ed;
+      text-align: left;
+
+      &:hover {
+        text-decoration: underline;
+        transition: all 0.9s linear;
+      }
     }
   }
 }
 
-.btn-viewAll{
-    margin-top: 50px;
-    margin-bottom: 200px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.8rem;
-    font-weight: bold;
-    line-height: 6rem;
-    color: #4089ED;
-    padding: 0 66px;
-    background-color: transparent;
-    border: 1px solid #4089ED;
+.btn-viewAll {
+  margin-top: 50px;
+  margin-bottom: 200px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 6rem;
+  color: #4089ed;
+  padding: 0 66px;
+  background-color: transparent;
+  border: 1px solid #4089ed;
 
-    &:hover{
-        background: #4089ED;
-        color: #fff;
-        transition: background .3s linear, color .3s linear;
-    }
+  &:hover {
+    background: #4089ed;
+    color: #fff;
+    transition: background 0.3s linear, color 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .article-cards {
+    display: grid;
+    justify-content: flex-start;
+    grid-auto-columns: 300px;
+    grid-auto-flow: column;
+    grid-gap: 3rem;
+    overflow: auto;
+    overflow-y: hidden;
+    scroll-snap-type: mandatory;
+    scroll-snap-stop: always;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding: 1rem;
+    grid-template-columns: unset;
+  }
 }
