@@ -59,17 +59,15 @@
     }
   }
 
-  .dowload-app {
+  .download-app {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
 
-    .dowload-app-content {
+    &-content {
       display: flex;
       flex-direction: column;
       max-width: 420px;
-      padding-left: 50px;
-      padding-right: 50px;
     }
   }
 
@@ -96,7 +94,7 @@
         }
       }
 
-      &-content{
+      &-content {
         padding: 0;
       }
     }
@@ -110,7 +108,7 @@
         }
       }
 
-      &-content{
+      &-content {
         padding: 0;
       }
     }

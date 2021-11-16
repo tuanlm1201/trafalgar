@@ -55,8 +55,12 @@
     }
   }
 
-  .slick-next {
+  .slick-arrow{
     top: 150%;
+    z-index: 9;
+  }
+
+  .slick-next {
     right: 40%;
 
     &:before {
@@ -65,7 +69,6 @@
   }
 
   .slick-prev {
-    top: 150%;
     left: 40%;
 
     &:before {
@@ -74,7 +77,12 @@
   }
 
   .slick-dots{
-    top: 150%;
+    bottom: -55%;
+    font-size: 2rem;
+
+    li button::before{
+      font-size: 1rem;
+    }
   }
 
   @media only screen and (max-width: 1023px) {

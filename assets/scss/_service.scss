@@ -1,5 +1,8 @@
 #service {
   margin-bottom: 220px;
+  background: url("../image/bg1.png") no-repeat;
+  background-position: -100px;
+
   .service-card {
     --column: 3;
     display: grid;
@@ -12,6 +15,7 @@
       box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
       border-radius: 20px;
       cursor: pointer;
+      background-color: #fff;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -20,6 +24,10 @@
         transform: translateY(-5px);
         transition: transform 0.1s linear;
       }
+    }
+
+    &__icon {
+      height: 100px;
     }
 
     &__content {
