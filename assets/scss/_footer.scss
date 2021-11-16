@@ -60,7 +60,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 1024px) {
   .footer-main {
     gap: 30px;
   }
@@ -82,5 +82,16 @@ footer {
         margin-left: 0 !important;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-info__desc {
+    width: 355px ;
+    max-width: 100%;
+  }
+
+  .footer-menu{
+    gap: 50px;
   }
 }
